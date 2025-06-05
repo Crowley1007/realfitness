@@ -128,7 +128,7 @@ export default function UserWorkouts({ userId, userRole }) { // Recebe userId e 
                 headers: { Authorization: `Bearer ${token}` }
             });
             setFormSuccess('Treino excluído com sucesso!');
-            fetchTreinos(); // Recarrega a lista
+            fetchTreinos();
         } catch (error) {
             console.error('Erro ao excluir treino:', error);
             setFormError('Erro ao excluir treino');

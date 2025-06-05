@@ -233,7 +233,7 @@ body {
     z-index: 1;
 }
 
-/* Animações de carregamento suaves */
+
 @keyframes shimmer {
     0% {
         background-position: -200px 0;
@@ -255,7 +255,7 @@ body {
     animation: shimmer 3s ease-in-out infinite;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .navbar {
         padding: 0 1rem;
@@ -284,7 +284,7 @@ body {
     }
 }
 
-/* Melhor performance para animações */
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

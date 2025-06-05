@@ -7,7 +7,7 @@
     min-height: 100vh;
     z-index: 1;
     margin-top: 70px;
-    /* Para compensar o navbar fixo */
+   
 }
 
 .background-img {
@@ -94,7 +94,7 @@
     will-change: transform;
 }
 
-/* Remover seções não utilizadas */
+
 .scroll-indicator {
     position: absolute;
     bottom: 2rem;
@@ -124,12 +124,12 @@
     transform: translateX(-50%) rotate(45deg);
 }
 
-/* Animações simplificadas */
+
 .content-wrapper::after {
     display: none;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .about-container {
         margin-top: 70px;
@@ -171,7 +171,7 @@
     }
 }
 
-/* Melhor performance para animações */
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

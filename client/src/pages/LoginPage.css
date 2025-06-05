@@ -2,8 +2,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 70px; /* Compensar altura da navbar fixa */
-  box-sizing: border-box; /* Importante para não afetar o layout */
+  padding-top: 70px;
+  box-sizing: border-box;
 }
 
 .main-content {
@@ -14,8 +14,8 @@
   position: relative;
   padding: 5rem 1.5rem;
   gap: 10rem;
-  width: 100%; /* Garantir largura total */
-  box-sizing: border-box; /* Importante para padding */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .forms-container {
@@ -24,8 +24,8 @@
   display: flex;
   justify-content: center;
   gap: 20rem;
-  z-index: 10; /* Menor que a navbar (que tem 1000+) */
-  position: relative; /* Garantir que z-index funcione */
+  z-index: 10;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -34,9 +34,9 @@
     gap: 4rem;
     align-items: center;
   }
-  
+
   .main-content {
-    padding: 2rem 1rem; /* Reduzir padding em mobile */
+    padding: 2rem 1rem;
     gap: 5rem;
   }
 }

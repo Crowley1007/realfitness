@@ -28,7 +28,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/contato" element={<ContactPage />} />
-          {/* 🆕 Rotas de recuperação de senha */}
+
           <Route path="/esqueci-senha" element={<ForgetPassword />} />
           <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
         </Routes>

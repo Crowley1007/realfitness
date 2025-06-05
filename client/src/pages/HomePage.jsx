@@ -115,7 +115,6 @@ function HomePage() {
         )}
       </AnimatePresence>
 
-      {/* Main Content */}
       <AnimatePresence>
         {showContent && (
           <motion.div

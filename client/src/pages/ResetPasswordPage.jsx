@@ -39,7 +39,7 @@ export default function ResetPasswordPage() {
             setMensagem(res.data.message);
             setSucesso(true);
 
-            // Redireciona para login após 3 segundos
+            
             setTimeout(() => {
                 navigate('/login');
             }, 3000);

@@ -13,7 +13,7 @@ enum Role {
   INSTRUTOR
 }
 
-// --- Enum que define o tipo de criador de um treino específico ---
+
 enum TipoCriador {
   ALUNO
   INSTRUTOR

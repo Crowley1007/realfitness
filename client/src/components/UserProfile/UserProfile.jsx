@@ -1,13 +1,13 @@
-// src/components/UserProfile.jsx
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import api from "../../services/api";
-import UserWorkouts from "./UserWorkouts"; // Importa o novo componente de treinos
-import "./UserProfile.css"; // Mantém o CSS original, agora sem os estilos de treino
+import UserWorkouts from "./UserWorkouts";
+import "./UserProfile.css";
 
 export default function UserProfile({ onLogout }) {
     const [user, setUser] = useState(null);
-    const [activeTab, setActiveTab] = useState('profile'); // 'profile' ou 'workouts'
+    const [activeTab, setActiveTab] = useState('profile');
     const [isEditing, setIsEditing] = useState(false);
     const [loading, setLoading] = useState(true);
     const [updating, setUpdating] = useState(false);
@@ -25,8 +25,8 @@ export default function UserProfile({ onLogout }) {
 
     useEffect(() => {
         fetchUserProfile();
-        // Não precisamos mais do fetchTreinos aqui, UserWorkouts vai cuidar disso.
-    }, []); // Array de dependências vazio para rodar apenas uma vez na montagem do componente
+
+    }, []);
 
     const fetchUserProfile = async () => {
         try {
@@ -44,7 +44,7 @@ export default function UserProfile({ onLogout }) {
                 newPassword: '',
                 confirmPassword: ''
             });
-            setError(''); // Limpa erro caso tenha tido antes
+            setError('');
         } catch (error) {
             console.error('Erro ao buscar perfil:', error);
             setError('Erro ao carregar perfil do usuário');
@@ -440,7 +440,7 @@ export default function UserProfile({ onLogout }) {
                             </AnimatePresence>
                         </>
                     ) : (
-                        // Renderiza o componente UserWorkouts quando a aba 'workouts' está ativa
+
                         <UserWorkouts userId={user?.id} userRole={user?.role} />
                     )}
                 </motion.div>

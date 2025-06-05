@@ -153,7 +153,7 @@ app.put('/usuarios/profile', authenticateToken, async (req, res) => {
         const updateData = {
             name,
             email,
-            age: (age !== undefined && age !== null && age !== '') ? parseInt(age) : user.age // Correção: Garante que age é um número ou mantém o antigo
+            age: (age !== undefined && age !== null && age !== '') ? parseInt(age) : user.age
         };
 
 
@@ -355,8 +355,8 @@ app.delete('/treinos/:id', authenticateToken, async (req, res) => {
     }
 });
 
-// --- ROTAS DE RECUPERAÇÃO DE SENHA ---
-const resetTokens = new Map(); // Garanta que este Map esteja no escopo global
+
+const resetTokens = new Map();
 
 app.post('/recuperar-senha', async (req, res) => {
     const { email } = req.body;
@@ -371,7 +371,7 @@ app.post('/recuperar-senha', async (req, res) => {
         }
 
         const token = crypto.randomBytes(32).toString('hex');
-        const expiresAt = new Date(Date.now() + 15 * 60 * 1000); // 15 minutos de expiração
+        const expiresAt = new Date(Date.now() + 15 * 60 * 1000);
 
         resetTokens.set(token, { userid: user.id, expires: expiresAt.getTime() });
         console.log(`Token de recuperação de senha gerado para o usuário ${user.id}: ${token}`);
