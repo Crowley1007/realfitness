@@ -1,7 +1,7 @@
-## 🗂 Estrutura do projeto
+##  Estrutura do projeto
 
-client: Interface do usuário
-server: API, autenticação, conexão com banco de dados
+`client/` : Interface do usuário
+`server/`: API, autenticação, conexão com banco de dados
 
 ---
 
