@@ -1,0 +1,17 @@
+
+.profile-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-main-content {
+    flex: 1;
+    position: relative;
+    z-index: 10;
+}
+
+
+.profile-page .background {
+    opacity: 0.3;
+}

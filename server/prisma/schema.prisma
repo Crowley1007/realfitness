@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ALUNO
+  INSTRUTOR
+}
+
+// --- Enum que define o tipo de criador de um treino específico ---
+enum TipoCriador {
+  ALUNO
+  INSTRUTOR
+}
+
+enum Visibilidade {
+  PUBLICO
+  PRIVADO
+  COMPARTILHADO
+}
+
+model User {
+  id                     String                   @id @default(auto()) @map("_id") @db.ObjectId
+  email                  String                   @unique
+  name                   String
+  age                    Int
+  createdAt              DateTime                 @default(now())
+  password               String
+  role                   Role
+  treinos                Treino[]
+  TreinoCompartilhamento TreinoCompartilhamento[]
+  treinosInstrutor       Treino[]                 @relation("instrutor")
+}
+
+model Treino {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  nome       String
+  descricao  String
+  exercicios Json
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  instrutor   User?   @relation("instrutor", fields: [instrutorId], references: [id])
+  instrutorId String? @db.ObjectId
+
+  criadorId    String
+  tipoCriador  TipoCriador  @default(ALUNO)
+  visibilidade Visibilidade @default(PRIVADO)
+
+  alunosCompartilhados TreinoCompartilhamento[]
+  User                 User?                    @relation(fields: [userId], references: [id])
+  userId               String?                  @db.ObjectId
+}
+
+model TreinoCompartilhamento {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  treino   Treino @relation(fields: [treinoId], references: [id], onDelete: Cascade)
+  treinoId String
+
+  aluno   User   @relation(fields: [alunoId], references: [id], onDelete: Cascade)
+  alunoId String @map("aluno") @db.ObjectId
+
+  @@unique([treinoId, alunoId])
+}

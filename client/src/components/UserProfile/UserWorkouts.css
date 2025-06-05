@@ -1,0 +1,180 @@
+/* src/components/UserWorkouts.css */
+
+/* Estilos para a seção de treinos */
+.workouts-list {
+    width: 100%;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #718096;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border: 2px dashed #e2e8f0;
+}
+
+.workout-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.workout-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.workout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.workout-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #474c54;
+    letter-spacing: 0.1em;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    flex: 1;
+}
+
+.workout-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.visibility-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.visibility-badge.privado {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #d97706;
+}
+
+.visibility-badge.publico {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.workout-action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.workout-action-btn.edit {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.workout-action-btn.edit:hover {
+    background-color: #2563eb;
+}
+
+.workout-action-btn.delete {
+    background-color: #ef4444;
+    color: white;
+}
+
+.workout-action-btn.delete:hover {
+    background-color: #dc2626;
+}
+
+.workout-description {
+    color: #6b7280;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.workout-exercises {
+    color: #374151;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.workout-exercises strong {
+    color: #1f2937;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.workout-exercises p {
+    margin: 0;
+    padding-left: 1rem;
+    white-space: pre-line;
+}
+
+.workout-form {
+    width: 100%;
+}
+
+/* Responsive Design para treinos */
+@media (max-width: 768px) {
+    .workout-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .workout-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .workout-action-btn {
+        flex: 1;
+        min-width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .workout-card {
+        padding: 1rem;
+    }
+
+    .workout-name {
+        font-size: 1.1rem;
+    }
+
+    .visibility-badge {
+        font-size: 0.5rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .workout-action-btn {
+        font-size: 0.55rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

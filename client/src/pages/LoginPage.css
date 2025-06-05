@@ -1,0 +1,42 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px; /* Compensar altura da navbar fixa */
+  box-sizing: border-box; /* Importante para não afetar o layout */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5rem 1.5rem;
+  gap: 10rem;
+  width: 100%; /* Garantir largura total */
+  box-sizing: border-box; /* Importante para padding */
+}
+
+.forms-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+  z-index: 10; /* Menor que a navbar (que tem 1000+) */
+  position: relative; /* Garantir que z-index funcione */
+}
+
+@media (max-width: 768px) {
+  .forms-container {
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .main-content {
+    padding: 2rem 1rem; /* Reduzir padding em mobile */
+    gap: 5rem;
+  }
+}

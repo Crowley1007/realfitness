@@ -1,0 +1,143 @@
+.signup-text {
+    color: #000000;
+    margin-bottom: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.signup-button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.signup-intro {
+    overflow: hidden;
+}
+
+.signup-form-container {
+    overflow: hidden;
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.user-type-selection {
+    margin-bottom: 2rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-start;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-radio {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid #4a5568;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.custom-radio.checked {
+    border-color: #4a5568;
+    background-color: transparent;
+}
+
+.radio-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #4a5568;
+    border-radius: 50%;
+}
+
+.radio-label {
+    color: #474c54;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+.name-inputs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.input-wrapper.half-width {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.submit-button.primary {
+    background-color: #323232;
+    color: white;
+    padding: 0.75rem 3.5rem;
+    border: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button.secondary {
+    background-color: #9ca3af;
+    color: white;
+    padding: 0.75rem 3.5rem;
+    border: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+
+@media (max-width: 480px) {
+    .radio-group {
+        gap: 2rem;
+    }
+
+    .name-inputs {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .input-wrapper.half-width {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-buttons {
+        gap: 0.5rem;
+    }
+
+    .submit-button.primary,
+    .submit-button.secondary {
+        padding: 0.75rem 2rem;
+    }
+}

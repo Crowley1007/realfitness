@@ -1,0 +1,238 @@
+
+.logo-intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #434d5e 0%, #2d3748 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.logo-intro-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-intro {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    z-index: 2;
+    position: relative;
+}
+
+
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.homepage-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+    transform: translateZ(0);
+}
+
+.homepage-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.homepage-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 2rem;
+    pointer-events: none;
+}
+
+.homepage-button {
+    pointer-events: all;
+}
+
+.homepage-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.12em;
+    position: relative;
+    z-index: 5;
+    margin-top: 70px;
+    line-height: 1.2;
+    transition: all 0.8s ease-out;
+}
+
+.homepage-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.08em;
+    font-weight: 300;
+    position: relative;
+    z-index: 4;
+    max-width: 600px;
+    line-height: 1.4;
+    transition: all 0.8s ease-out;
+}
+
+.homepage-button {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    color: #323232;
+    padding: 1rem 4rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 4;
+    pointer-events: all;
+    overflow: hidden;
+}
+
+.homepage-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.homepage-button:hover::before {
+    left: 100%;
+}
+
+.homepage-button:hover {
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.2em;
+}
+
+.homepage-features {
+    padding: 4rem 2rem;
+    background: white;
+    z-index: 3;
+    position: relative;
+    margin-top: 100vh;
+}
+
+.page-with-navbar-spacing {
+    padding-top: 70px;
+}
+
+
+.homepage-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .logo-intro {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .homepage-hero h1 {
+        font-size: 2.2rem;
+        margin-top: 70px;
+        letter-spacing: 0.08em;
+    }
+
+    .homepage-hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+        letter-spacing: 0.05em;
+    }
+
+    .homepage-button {
+        padding: 0.8rem 3rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+    }
+
+    .homepage-hero {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-intro {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-pulse {
+        width: 100px;
+        height: 100px;
+    }
+
+    .homepage-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .homepage-hero p {
+        font-size: 1rem;
+    }
+
+    .homepage-button {
+        padding: 0.7rem 2.5rem;
+        font-size: 0.7rem;
+    }
+}

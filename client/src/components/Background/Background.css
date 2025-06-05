@@ -1,0 +1,16 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #f8f8f8;
+    background-image: url('../../assets/Logobg.png');
+    background-size: 170vh;
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    background-blend-mode: normal;
+
+}
