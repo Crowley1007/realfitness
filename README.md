@@ -8,7 +8,7 @@
 ##  Como executar
 
 ### Pré-requisitos
-- Node.js instalado (
+- Node.js instalado 
 - Git instalado
 
 
