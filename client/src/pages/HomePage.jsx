@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 import GymBackground from '../assets/FundoHome.avif';
 import Logo from '../assets/Logo.png';
@@ -8,6 +9,8 @@ function HomePage() {
   const [showIntro, setShowIntro] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -89,6 +92,10 @@ function HomePage() {
     }
   };
 
+  const handleComeceAgoraClick = () => {
+    navigate('/login');
+  };
+
   return (
     <>
 
@@ -145,7 +152,7 @@ function HomePage() {
 
                   }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => alert('Botão "Comece Agora" clicado!')}
+                  onClick={handleComeceAgoraClick}
                 >
                   COMECE AGORA
                 </motion.button>

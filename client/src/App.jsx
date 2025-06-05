@@ -21,7 +21,8 @@ function App() {
     <Router>
       <AuthProvider>
         <Navbar />
-        <Routes location={location} key={location.pathname}>
+        <Routes location={location} key={location.pathname}>`
+          <Route path="/" element={<HomePage />} /> 
           <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/profile" element={<ProfilePage />} />
